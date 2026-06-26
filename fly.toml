@@ -1,10 +1,10 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "{APP_NAME}"
+app = "fusion-sqf4rq"
 
 # https://fly.io/docs/reference/regions/#fly-io-regions
-primary_region = "{REGION}"
+primary_region = "ams"
 
 [build]
 image = 'ghcr.io/0x2e/fusion:latest'
