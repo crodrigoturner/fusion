@@ -7,7 +7,7 @@ app = "fusion-sqf4rq"
 primary_region = "ams"
 
 [build]
-image = 'ghcr.io/0x2e/fusion:latest'
+image = 'https://github.com/0x2e/fusion/pkgs/container/fusion'
 
 [http_service]
 internal_port = 8080
