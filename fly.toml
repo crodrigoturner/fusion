@@ -1,29 +1,29 @@
+# fly.toml app configuration file generated for fusion-sqf4rq on 2026-06-26T08:38:14Z
+#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "fusion-sqf4rq"
-
-# https://fly.io/docs/reference/regions/#fly-io-regions
-primary_region = "ams"
+app = 'fusion-sqf4rq'
+primary_region = 'ams'
 
 [build]
-image = "ghcr.io/0x2e/fusion:latest"
-
-[http_service]
-internal_port = 8080
-force_https = true
-auto_stop_machines = "off"
-auto_start_machines = false
-
-[[vm]]
-size = "shared-cpu-1x"
-memory = "256mb"
+  image = 'ghcr.io/0x2e/fusion:latest'
 
 [env]
-FUSION_HOST = "0.0.0.0"
-FUSION_DB_PATH = "/data/fusion.db"
+  FUSION_DB_PATH = '/data/fusion.db'
+  FUSION_HOST = '0.0.0.0'
 
 [[mounts]]
-source = "fusion_data"
-destination = "/data"
-initial_size = "1GB"
+  source = 'fusion_data'
+  destination = '/data'
+  initial_size = '1GB'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'off'
+  auto_start_machines = false
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '256mb'
